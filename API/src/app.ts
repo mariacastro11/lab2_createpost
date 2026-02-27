@@ -1,10 +1,10 @@
 import express, { Router } from 'express';
-import { PORT, NODE_ENV } from './config'; //option + esc para ver la variable que exporté
-import { UserRouter } from './features/users/user.router';
+import { PORT, NODE_ENV } from './config'; 
+import { PostRouter } from './features/posts/post.router';
 import cors from 'cors';
-import { UserController } from './features/users/user.controller';
 import { erroreMiddleware } from './middlewares/errorsMiddleware';
-import { UserService } from './features/users/user.service';
+import { PostService } from './features/posts/post.service';
+import { PostController } from './features/posts/post.controller';
 
 const app = express();
 app.use(express.json());
@@ -18,11 +18,11 @@ app.get('/', (req, res) => {
 const apiRouter = Router();
 app.use('/api', apiRouter);
 
-const userService = new UserService();
+const userService = new PostService();
 
-const userController = new UserController(userService);
+const postController = new PostController(userService);
 
-const userRouter = new UserRouter(userController);
+const userRouter = new PostRouter(postController);
 apiRouter.use(userRouter.router);
 
 app.use(erroreMiddleware);
