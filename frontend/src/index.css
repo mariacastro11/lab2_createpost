@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
+ 
   --primary: #2563eb;   
   --secondary: #10b981; 
   --bg: #f5f7fb;
@@ -15,11 +16,13 @@
   text-rendering: optimizeLegibility;
 }
 
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 body {
   display: flex;
@@ -32,15 +35,9 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
 }
 
-.posts-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
 
 h1 {
   font-size: 3rem;
@@ -53,6 +50,7 @@ h2 {
   margin-top: 20px;
   color: var(--text);
 }
+
 
 button {
   border-radius: 12px;
@@ -73,6 +71,7 @@ button:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }
+
 
 input, textarea {
   width: 100%;
@@ -97,6 +96,7 @@ input:focus, textarea:focus {
   background: var(--card);
   border-radius: 16px;
   padding: 20px;
+  margin-top: 25px;
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
@@ -109,22 +109,23 @@ input:focus, textarea:focus {
 
 .post img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
   border-radius: 12px;
   margin-top: 10px;
 }
+
 
 .post p {
   margin-top: 10px;
   color: #475569;
 }
 
+
 .new-post-btn {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
+
 
 .form-container {
   background: var(--card);
